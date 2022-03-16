@@ -9,21 +9,29 @@
             </a>
           </li>
         @can('admin')
-        <ul>
         <li class="nav-item">
-          <a class="nav-link  {{ Request::is('dashboard/pengasuh*')? 'active' : '' }}" href="/dashboard/pengasuh">
+          <a class="nav-link  {{ Request::is('subjects/index*')? 'active' : '' }}" href="/subjects/index">
             <span data-feather="users"></span>
-            Contoh Admin
+            Mata Pelajaran
           </a>
         </li>
-    </ul>
     @endcan
+       @can('admin')
         <li class="nav-item">
-            <a class="nav-link  {{ Request::is('dashboard/kebutuhan*')? 'active' : '' }}" href="/dashboard/kebutuhan">
-              <span data-feather="box"></span>
-              Contoh User
-            </a>
-          </li>
+          <a class="nav-link  {{ Request::is('subjects/index*')? 'active' : '' }}" href="/subjects/index">
+            <span data-feather="users"></span>
+           Membuat Soal
+          </a>
+        </li>
+
+    @endcan
+
+        <li class="nav-item">
+          <a class="nav-link  {{ Request::is('subjects/index*')? 'active' : '' }}" href="/subjects/index">
+            <span data-feather="users"></span>
+            menjawab soal
+          </a>
+        </li>
 
     </div>
   </nav>

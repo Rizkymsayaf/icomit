@@ -7,6 +7,7 @@ use App\Models\Category;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\RegisterController;
 use SebastianBergmann\CodeCoverage\Report\Htmsl\Dashboard;
 
@@ -41,6 +42,9 @@ Route::get('dashboard', function() {
 
 // Route::resource('/dashboard/anak_asuh', AnakAsuhController::class )->middleware('auth');
 // Route::resource('/dashboard/anak', AnakController::class )->middleware('admin');
+
+
+Route::resource('/subjects', SubjectController::class )->middleware('admin');
 
 
 
